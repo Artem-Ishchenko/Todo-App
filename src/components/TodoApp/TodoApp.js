@@ -114,6 +114,7 @@ export default class TodoApp extends Component {
 
   render() {
     const { todoData, filter } = this.state;
+    console.log();
 
     const visibleItems = this.filter(todoData, filter);
     const completedCount = todoData.filter((el) => el.completed).length;
