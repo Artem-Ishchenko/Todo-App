@@ -24,7 +24,6 @@ export default [
       globals: {
         ...globals.node,
         ...globals.browser,
-        ...globals.es2021,
       },
       parserOptions: eslintReact.configs.recommended.parserOptions,
     },
@@ -33,7 +32,7 @@ export default [
     files: ['**/*{js,jsx}'],
     rules: {
       ...eslintConfigPrettier.rules,
-      '@stylistic/js/indent': ['error', 2],
+      '@stylistic/js/indent': ['error', 2, { SwitchCase: 1 }],
       '@stylistic/js/linebreak-style': ['error', 'unix'],
       quotes: ['error', 'single'],
       semi: ['error', 'never'],

@@ -1,6 +1,5 @@
 {
   "name": "todo-app",
-  "type": "module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,8 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
     "@babel/eslint-parser": "^7.26.5",
+    "@babel/preset-env": "^7.26.0",
     "@stylistic/eslint-plugin-js": "^2.13.0",
     "ajv": "^7.2.4",
     "eslint": "^9.18.0",
@@ -59,12 +60,16 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
-    "prettier": "3.4.2"
+    "prettier": "3.4.2",
+    "webpack-cli": "^6.0.1"
   },
   "overrides": {
     "eslint": "^9.18.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint", "prettier --write"]
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "prettier --write"
+    ]
   }
 }
