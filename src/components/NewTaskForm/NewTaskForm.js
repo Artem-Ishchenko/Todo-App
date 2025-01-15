@@ -4,8 +4,7 @@ import './NewTaskForm.css';
 export default class NewTaskForm extends Component {
   static defaultProps = {
     onItemAdded: () => {
-      // console.log("check");
-      console.log('dfgdfg');
+      console.log('check');
     },
   };
 
