@@ -12,7 +12,7 @@ export default class Footer extends Component {
     onClearCompleted: () => {
       console.log('click onFilterChange default');
     },
-    // todo: 999,
+    todo: 999,
   };
 
   render() {

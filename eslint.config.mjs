@@ -6,7 +6,12 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import importPlugin from 'eslint-plugin-import';
 import stylisticJs from '@stylistic/eslint-plugin-js';
+
 export default [
+  js.configs.recommended,
+  {
+    ignores: ['node_modules', 'dist', 'build'],
+  },
   {
     plugins: {
       '@stylistic/js': stylisticJs,
@@ -15,10 +20,6 @@ export default [
       import: importPlugin,
     },
   },
-  {
-    ignores: ['node_modules', 'dist', 'build'],
-  },
-  js.configs.recommended,
   {
     languageOptions: {
       globals: {
